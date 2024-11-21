@@ -5,8 +5,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="vboxPrincipal" alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.PrimaryController">
+<VBox fx:id="vboxPrincipal" alignment="CENTER" prefHeight="252.0" prefWidth="451.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.PrimaryController">
    <children>
+      <Button fx:id="b11" mnemonicParsing="false" onAction="#revelar" prefHeight="133.0" prefWidth="140.0" />
       <Label text="Primary View" />
       <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Switch to Secondary View" />
    </children>
