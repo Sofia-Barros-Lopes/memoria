@@ -2,16 +2,22 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox fx:id="vboxPrincipal" alignment="CENTER" prefHeight="252.0" prefWidth="451.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.PrimaryController">
    <children>
-      <Button fx:id="b11" mnemonicParsing="false" onAction="#revelar" prefHeight="133.0" prefWidth="140.0" />
-      <ImageView fx:id="ivImagem" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#revelar" pickOnBounds="true" preserveRatio="true" />
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Switch to Secondary View" />
+      <ImageView fx:id="jogoLogo" fitHeight="391.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@titulo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="primaryButton" onAction="#switchToSecondary" prefHeight="64.0" prefWidth="144.0" text="Play" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="35.0" />
+         </font></Button>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
