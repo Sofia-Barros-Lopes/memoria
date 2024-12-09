@@ -1,14 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.SecondaryController">
+<VBox fx:id="fundoDois" alignment="CENTER" prefHeight="751.0" prefWidth="1191.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.SecondaryController">
     <children>
-        <Label text="Secondary View" />
-        <Button fx:id="secondaryButton" text="Switch to Primary View" onAction="#switchToPrimary" />
+      <GridPane prefHeight="600.0" prefWidth="1059.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="116.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="116.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="558.0" minWidth="10.0" prefWidth="556.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="iv00" fitHeight="115.0" fitWidth="118.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagemelefante.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv10" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@imagemelefante.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="iv01" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagemcachorro.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv11" fitHeight="120.0" fitWidth="123.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagemfoca.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv02" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagemtigre.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv12" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagemMacaco.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv03" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@imagemcavalo.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv13" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@imagemcobra.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv04" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagemgato.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv20" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@imagemleao.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv21" fitHeight="120.0" fitWidth="120.0" onDragDetected="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagemhamster.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv22" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagembaleia.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv14" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagemarara.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv24" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagemleao.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv30" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@imagemtigre.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv31" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagemcobra.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv32" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagemgato.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv33" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@imagemfoca.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv34" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagemhamster.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv40" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@imagemarara.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv41" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagemcavalo.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv42" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagemMacaco.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv43" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@imagembaleia.png" />
+               </image></ImageView>
+            <ImageView fx:id="iv44" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagemcachorro.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv50" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+               <image>
+                  <Image url="@imagemvaca.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv51" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@imagempeixe.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv52" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@imagemovelha.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv53" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@imagemovelha.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iv54" fitHeight="120.0" fitWidth="120.0" onMouseClicked="#virarCarta" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@imagempeixe.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+        <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Switch to Primary View" />
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
