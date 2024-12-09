@@ -6,60 +6,35 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class PrimaryController implements Initializable {
 
+    // Variável de controle para saber se a imagem foi carregada
     private boolean clicou = false;
 
     @FXML
     private VBox vboxPrincipal;
 
     @FXML
-    private Button b11;
-
-    @FXML
-    private ImageView ivImagem;
+    private ImageView jogoLogo;
 
     @FXML
     private void switchToSecondary() throws IOException {
+        // Muda para a tela secundária
         App.setRoot("secondary");
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        BackgroundFill bf = new BackgroundFill(Color.AQUAMARINE, CornerRadii.EMPTY, Insets.EMPTY);
+        // Define o fundo inicial do VBox
+        BackgroundFill bf = new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY);
         Background bg = new Background(bf);
         vboxPrincipal.setBackground(bg);
-    }
-
-    @FXML
-    public void revelar(){
-        BackgroundFill bf = null;
-        if (!clicou){
-
-            // lendo a imagem
-            Image image = new Image(this.getClass().getResource("animal-para-desenhar-2.jpg").toString());
-            System.out.println(image.getHeight() + " x " + image.getWidth());
-            System.out.println(image.getUrl());
-
-            // carregar o background no botão
-            ivImagem.setImage(image);
-
-            clicou = true;
-        } else {
-            bf = new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY);
-            ivImagem.setImage(null);
-            clicou = false;
-        }
-        Background bg = new Background(bf);
-        b11.setBackground(bg);
     }
 }
